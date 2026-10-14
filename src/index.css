@@ -1,0 +1,49 @@
+/* Global Reset & Base Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Inter', 'Inter Fallback', sans-serif !important;
+  color: #080131;
+  background-color: #f4f4f2;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #080131;
+  text-decoration: none;
+}
+
+/* Custom Scrollbar adhering strictly to approved palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080131;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4f4f2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #002c62;
+}
+
+/* Ensure all form controls default font */
+input, textarea, select, button {
+  font-family: 'Inter', 'Inter Fallback', sans-serif !important;
+}
+
+::selection {
+  background: #080131;
+  color: #FFFFFF;
+}
