@@ -34,6 +34,10 @@ export const AboutUs = () => {
         subtitle="Learn about our purpose, institutional heritage at Sathyabama, and enduring commitment to empowering students through education and equity."
         badge="Our Heritage & Mission"
         breadcrumbCurrent="About Us"
+        stats={[
+          { value: '2006', title: 'Founded', desc: 'Serving with compassion' },
+          { value: '18+', title: 'Dedicated Years', desc: 'Grassroots upliftment' },
+        ]}
       />
 
       {/* SECTION 1: OUR STORY (Background: #faf6ef) */}
@@ -143,10 +147,10 @@ export const AboutUs = () => {
 
             <Box
               component={motion.div}
-              initial={{ opacity: 0, x: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              initial={{ opacity: 0, y: 36, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.7, ease: [0.25, 0.8, 0.25, 1] }}
+              transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
               sx={{ flex: { xs: "1 1 100%", md: "0 0 42%", lg: "0 0 40%" }, width: "100%" }}
             >
               <Card
@@ -157,9 +161,14 @@ export const AboutUs = () => {
                   overflow: 'hidden',
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
                   boxShadow: '0 16px 40px rgba(8, 1, 49, 0.12)',
+                  transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                  '&:hover': {
+                    transform: 'translateY(-6px)',
+                    boxShadow: '0 24px 50px rgba(8, 1, 49, 0.18)',
+                  },
                 }}
               >
-                <Box sx={{ height: { xs: 280, sm: 340, md: 360 }, overflow: 'hidden', borderRadius: 0 }}>
+                <Box sx={{ height: { xs: 280, sm: 340, md: 360 }, overflow: 'hidden', borderRadius: 0, position: 'relative' }}>
                   <Box
                     component="img"
                     src="/images/image-1.jpeg"
@@ -170,8 +179,8 @@ export const AboutUs = () => {
                       borderRadius: 0,
                       objectFit: 'cover',
                       objectPosition: 'center top',
-                      transition: 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                      '&:hover': { transform: 'scale(1.05)' },
+                      transition: 'transform 0.85s cubic-bezier(0.16, 1, 0.3, 1)',
+                      '&:hover': { transform: 'scale(1.08)' },
                     }}
                   />
                 </Box>

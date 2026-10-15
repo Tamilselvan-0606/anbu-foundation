@@ -46,6 +46,10 @@ export const Announcements = () => {
         subtitle="Stay informed about Anbu Foundation activities, application schedules, volunteer programs, and institutional notices."
         badge="Official Bulletin"
         breadcrumbCurrent="Announcements"
+        stats={[
+          { value: 'Latest', title: 'Circulars', desc: 'Official notifications' },
+          { value: 'Verified', title: 'Active Updates', desc: 'Scholarships & events' },
+        ]}
       />
 
 

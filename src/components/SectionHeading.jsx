@@ -56,35 +56,53 @@ export const SectionHeading = ({
       <Typography
         variant="h2"
         component={motion.h2}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.15 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         sx={{
           fontWeight: 600,
-          fontSize: { xs: '1.85rem', sm: '2.2rem', md: '2.5rem' },
+          fontSize: { xs: '1.85rem', sm: '2.2rem', md: '2.6rem' },
           color: mainColor,
           lineHeight: 1.25,
-          letterSpacing: '-0.01em',
-          mb: 2,
+          letterSpacing: '-0.015em',
+          mb: 1.5,
           ...titleSx,
         }}
       >
         {title}
       </Typography>
 
+      {/* BNR-Style animated expanding divider line */}
+      <Box
+        component={motion.div}
+        initial={{ scaleX: 0, opacity: 0 }}
+        whileInView={{ scaleX: 1, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.85, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+        sx={{
+          width: 54,
+          height: 2.5,
+          backgroundColor: '#002c62',
+          mx: align === 'center' ? 'auto' : 0,
+          my: 1.8,
+          borderRadius: '2px',
+          transformOrigin: align === 'center' ? 'center' : 'left',
+        }}
+      />
+
       {subtitle && (
         <Typography
           variant="body1"
           component={motion.p}
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.25 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.75, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
           sx={{
             color: mainColor,
             opacity: 0.9,
-            fontSize: { xs: '0.92rem', md: '0.98rem' },
+            fontSize: { xs: '0.94rem', md: '1.02rem' },
             lineHeight: 1.75,
             fontWeight: 400,
           }}

@@ -47,6 +47,10 @@ export const SuccessStories = () => {
         subtitle="Explore the experiences, milestones, and breakthroughs of scholars and communities supported through Anbu Foundation."
         badge="Real Milestones"
         breadcrumbCurrent="Success Stories"
+        stats={[
+          { value: '100+', title: 'Inspiring Stories', desc: 'Transformative journeys' },
+          { value: '100%', title: 'Verified Impact', desc: 'Real scholar experiences' },
+        ]}
       />
 
 

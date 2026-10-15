@@ -103,6 +103,11 @@ export const Admission = () => {
         subtitle="Explore available scholarship opportunities, understand eligibility and documentation requirements, and begin your journey with Anbu Foundation."
         badge="Admissions & Eligibility"
         breadcrumbCurrent="Admission"
+        stats={[
+          { value: '100%', title: 'Tuition Aid', desc: 'Full merit scholarship' },
+          { value: 'Merit', title: '& Need Based', desc: 'Inclusive qualification' },
+          { value: 'Annual', title: 'Admissions', desc: 'Sathyabama campus' },
+        ]}
       />
 
 

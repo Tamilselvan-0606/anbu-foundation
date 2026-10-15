@@ -74,7 +74,7 @@ export const InitiativeCard = ({ initiative }) => {
         }}
         onClick={() => navigate(`/initiatives#${initiative.id}`)}
       >
-      {/* 1. Full Image Background */}
+      {/* 1. Full Image Background with BNR-Style Depth */}
       <Box
         className="card-bg-image"
         component="img"
@@ -88,7 +88,8 @@ export const InitiativeCard = ({ initiative }) => {
           height: '100%',
           objectFit: 'cover',
           display: 'block',
-          transition: 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)',
+          transform: isHovered ? 'scale(1.08)' : 'scale(1)',
+          transition: 'transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease',
         }}
       />
 

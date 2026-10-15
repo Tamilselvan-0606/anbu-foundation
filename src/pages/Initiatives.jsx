@@ -42,6 +42,11 @@ export const Initiatives = () => {
         subtitle="Discover structured institutional programs designed to encourage learning, foster technical capabilities, and drive compassionate community welfare."
         badge="Our Action Tracks"
         breadcrumbCurrent="Initiatives"
+        stats={[
+          { value: '5+', title: 'Active Initiatives', desc: 'Education & Community' },
+          { value: '4', title: 'Focus Sectors', desc: 'Academic, Health & Rural' },
+          { value: '100%', title: 'Direct Reach', desc: 'Grassroots empowerment' },
+        ]}
       />
 
       <Box sx={{ backgroundColor: "#faf6ef", py: { xs: 6, md: 8 }, borderBottom: "1px solid rgba(8, 1, 49, 0.1)" }}>
@@ -189,11 +194,11 @@ export const Initiatives = () => {
                         </Box>
                         {/* Activities below image */}
                         {item.activities && item.activities.length > 0 && (
-                          <Box sx={{ px: 3, py: 3, backgroundColor: "#f4f4f2", flex: 1, borderTop: "1.5px solid rgba(8,1,49,0.08)" }}>
+                          <Box sx={{ px: 3, py: 3, backgroundColor: "#f4f4f2", flex: 1, borderTop: "1.5px solid rgba(8,1,49,0.08)", display: "flex", flexDirection: "column" }}>
                             <Typography sx={{ fontWeight: 700, color: "#080131", mb: 2, fontSize: "0.88rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                               Key Operational Activities
                             </Typography>
-                            <Box sx={{ display: "flex", flexDirection: "column", gap: 1.2 }}>
+                            <Box sx={{ display: "flex", flexDirection: "column", gap: 1.2, mb: 2.5 }}>
                               {item.activities.map((act, idx) => (
                                 <Box key={idx} sx={{ display: "flex", alignItems: "flex-start", gap: 1.5, p: 1.5, backgroundColor: "#002c62", borderRadius: "6px" }}>
                                   <CheckCircleIcon sx={{ color: "#FFFFFF", fontSize: 15, mt: 0.3, flexShrink: 0 }} />
@@ -202,6 +207,26 @@ export const Initiatives = () => {
                                   </Typography>
                                 </Box>
                               ))}
+                            </Box>
+                            <Box sx={{ pt: 2, borderTop: "1px solid rgba(8,1,49,0.1)", display: "flex", justifyContent: "center" }}>
+                              <Box
+                                component="span"
+                                onClick={() => navigate("/admission")}
+                                sx={{
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: 1,
+                                  color: "#002c62",
+                                  fontWeight: 700,
+                                  fontSize: "0.88rem",
+                                  cursor: "pointer",
+                                  transition: "gap 0.2s ease, color 0.2s ease",
+                                  "&:hover": { gap: 1.5, color: "#080131" },
+                                }}
+                              >
+                                <span>Apply / Participate</span>
+                                <ArrowForwardIcon sx={{ fontSize: "1rem" }} />
+                              </Box>
                             </Box>
                           </Box>
                         )}
@@ -249,16 +274,6 @@ export const Initiatives = () => {
                             </Box>
                           </Box>
                         )}
-                        <Box sx={{ pt: 2, borderTop: "1px solid rgba(8,1,49,0.08)", display: "flex", justifyContent: "flex-end" }}>
-                          <Box
-                            component="span"
-                            onClick={() => navigate("/admission")}
-                            sx={{ display: "inline-flex", alignItems: "center", gap: 1, color: "#002c62", fontWeight: 700, fontSize: "0.88rem", cursor: "pointer", transition: "gap 0.2s ease", "&:hover": { gap: 1.5 } }}
-                          >
-                            <span>Apply / Participate</span>
-                            <ArrowForwardIcon sx={{ fontSize: "1rem" }} />
-                          </Box>
-                        </Box>
                       </Box>
                     </Box>
                   </Box>

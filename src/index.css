@@ -15,6 +15,17 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Headings only: Playfair Display */
+h1, h2, h3, h4, h5, h6,
+.MuiTypography-h1,
+.MuiTypography-h2,
+.MuiTypography-h3,
+.MuiTypography-h4,
+.MuiTypography-h5,
+.MuiTypography-h6 {
+  font-family: 'Playfair Display', serif !important;
+}
+
 a {
   color: #080131;
   text-decoration: none;
@@ -46,4 +57,86 @@ input, textarea, select, button {
 ::selection {
   background: #080131;
   color: #FFFFFF;
+}
+
+/* Animations inspired by bnreventplanner.com */
+
+/* 1. Ken Burns cinematic image zoom/pan */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurns 20s ease-in-out infinite alternate !important;
+}
+
+/* 2. Global BNR-Style Heading & Section Title Mask Reveal */
+@keyframes bnrHeadlineReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(42px);
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* 3. Global Content Fade & Smooth Slide Up */
+@keyframes bnrContentReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 4. Luxury Image Zoom on all cards across all pages */
+.MuiCard-root {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-6px) !important;
+}
+
+.MuiCard-root img {
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease !important;
+}
+
+.MuiCard-root:hover img {
+  transform: scale(1.08) !important;
+}
+
+/* 5. Expanding Divider Accent */
+@keyframes drawDividerLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 58px;
+    opacity: 1;
+  }
+}
+
+.bnr-line {
+  height: 2.5px;
+  background-color: #002c62;
+  margin: 12px auto 18px;
+  border-radius: 2px;
+  animation: drawDividerLine 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

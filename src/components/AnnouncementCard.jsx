@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Typography, Box, Button } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -107,10 +108,18 @@ export const AnnouncementCard = ({ announcement }) => {
         <Box sx={{ display: 'flex', justifyContent: 'center', pb: 0.5 }}>
           <Button
             onClick={() => navigate(`/announcements/${announcement.id}`)}
+            endIcon={
+              <ArrowForwardIcon
+                sx={{
+                  fontSize: '1.1rem !important',
+                  transition: 'transform 0.25s ease',
+                }}
+              />
+            }
             sx={{
               backgroundColor: '#002c62',
               color: '#FFFFFF',
-              px: 3.5,
+              px: 3,
               py: 1,
               fontSize: '0.92rem',
               fontWeight: 700,
@@ -125,6 +134,9 @@ export const AnnouncementCard = ({ announcement }) => {
                 borderColor: '#080131',
                 boxShadow: '0 5px 16px rgba(0, 44, 98, 0.3)',
                 transform: 'translateY(-2px)',
+                '& .MuiButton-endIcon': {
+                  transform: 'translateX(4px)',
+                },
               },
             }}
           >

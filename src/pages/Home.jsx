@@ -102,28 +102,30 @@ export const Home = () => {
           borderBottom: '1px solid rgba(8, 1, 49, 0.12)',
         }}
       >
-        {/* Full Campus Background Image */}
+        {/* Full Campus Background Image with BNR-Style Ken Burns slow zoom */}
         <Box
           component="img"
-          src="/images/hero-campus.png"
+          className="animate-ken-burns"
+          src="/images/image-15 copy.jpg"
           alt="Campus Background"
           sx={{
             position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
+            inset: '-5%',
+            width: '110%',
+            height: '110%',
             objectFit: 'cover',
             objectPosition: 'center',
             zIndex: 0,
+            transformOrigin: 'center center',
           }}
         />
 
-        {/* Soft readable gradient overlay to let the photo shine clearly */}
+        {/* Balanced gradient overlay to let the photo shine vividly while keeping text effortlessly readable */}
         <Box
           sx={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(90deg, rgba(244, 244, 242, 0.88) 0%, rgba(244, 244, 242, 0.65) 55%, rgba(244, 244, 242, 0.45) 100%)',
+            background: 'linear-gradient(90deg, rgba(244, 244, 242, 0.75) 0%, rgba(244, 244, 242, 0.55) 45%, rgba(244, 244, 242, 0.25) 78%, rgba(244, 244, 242, 0.08) 100%)',
             zIndex: 1,
           }}
         />
@@ -216,12 +218,13 @@ export const Home = () => {
                   variant="h1"
                   component="h1"
                   sx={{
-                    fontWeight: 600,
-                    fontSize: { xs: '2rem', sm: '2.6rem', md: '3.2rem' },
+                    fontWeight: 700,
+                    fontSize: { xs: '2.1rem', sm: '2.8rem', md: '3.4rem' },
                     lineHeight: 1.15,
                     letterSpacing: '-0.02em',
                     color: '#080131',
                     mb: 2.5,
+                    textShadow: '0 2px 12px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(255, 255, 255, 1)',
                   }}
                 >
                   <Box
@@ -253,10 +256,9 @@ export const Home = () => {
                     <Box
                       component="span"
                       sx={{
-                        background: 'linear-gradient(90deg, #080131 0%, #002c62 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
+                        color: '#002c62',
                         fontWeight: 700,
+                        textShadow: '0 2px 12px rgba(255, 255, 255, 0.9), 0 1px 3px rgba(255, 255, 255, 1)',
                       }}
                     >
                       {typedText}
@@ -267,20 +269,31 @@ export const Home = () => {
                 {/* Hero Description */}
                 <Typography
                   variant="body1"
+                  component={motion.p}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                   sx={{
-                    fontSize: { xs: '0.9rem', md: '1.02rem' },
-                    lineHeight: 1.65,
+                    fontSize: { xs: '0.98rem', md: '1.08rem' },
+                    lineHeight: 1.75,
                     color: '#080131',
-                    opacity: 0.9,
+                    fontWeight: 600,
                     maxWidth: 620,
                     mb: 3.5,
+                    textShadow: '0 1px 10px rgba(255, 255, 255, 0.95), 0 1px 2px rgba(255, 255, 255, 1)',
                   }}
                 >
                   {foundationData.motto} Anbu Foundation is committed to nurturing talent, creating higher education opportunities, and empowering students to build a brighter, more inclusive tomorrow.
                 </Typography>
 
                 {/* CTA Buttons */}
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}>
+                <Box
+                  component={motion.div}
+                  initial={{ opacity: 0, y: 22 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                  sx={{ display: 'flex', flexWrap: 'wrap', gap: 2.5 }}
+                >
                   <Button
                     size="large"
                     onClick={() => navigate('/initiatives')}
@@ -295,10 +308,12 @@ export const Home = () => {
                       borderRadius: '8px',
                       border: '1.5px solid rgba(255, 255, 255, 0.3)',
                       boxShadow: '0 8px 24px rgba(8, 1, 49, 0.15)',
+                      transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                       '&:hover': {
                         backgroundColor: '#002c62',
                         borderColor: '#FFFFFF',
-                        transform: 'translateY(-2px)',
+                        transform: 'translateY(-3px)',
+                        boxShadow: '0 12px 30px rgba(0, 44, 98, 0.4)',
                       },
                     }}
                   >
@@ -319,10 +334,12 @@ export const Home = () => {
                       fontSize: '1rem',
                       fontWeight: 700,
                       borderRadius: '8px',
+                      transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                       '&:hover': {
                         backgroundColor: '#002c62',
                         border: '1.5px solid #002c62',
-                        transform: 'translateY(-2px)',
+                        transform: 'translateY(-3px)',
+                        boxShadow: '0 12px 30px rgba(0, 44, 98, 0.3)',
                       },
                     }}
                   >

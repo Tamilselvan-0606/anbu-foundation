@@ -17,6 +17,7 @@ export const Footer = () => {
   return (
     <Box
       component="footer"
+      id="site-footer"
       sx={{
         backgroundColor: '#002c62',
         color: '#FFFFFF',
@@ -26,9 +27,9 @@ export const Footer = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={{ xs: 4, sm: 3, md: 4, lg: 5 }} alignItems="flex-start">
+        <Grid container spacing={{ xs: 4, sm: 3, md: 4 }} justifyContent="space-between" alignItems="flex-start">
           {/* Column 1: Logo & Social Media Icons */}
-          <Grid item xs={12} sm={6} md={3} lg={3}>
+          <Grid item xs={12} sm={6} md={3.2} lg={3}>
             <Box sx={{ mb: 3 }}>
               <Box
                 component="img"
@@ -66,6 +67,7 @@ export const Footer = () => {
               >
                 <FacebookIcon sx={{ color: '#FFFFFF', fontSize: 18 }} />
               </IconButton>
+
               <IconButton
                 component="a"
                 href={foundationData.contact.socialLinks.twitter}
@@ -87,6 +89,7 @@ export const Footer = () => {
               >
                 <TwitterIcon sx={{ color: '#FFFFFF', fontSize: 18 }} />
               </IconButton>
+
               <IconButton
                 component="a"
                 href={foundationData.contact.socialLinks.youtube}
@@ -108,6 +111,7 @@ export const Footer = () => {
               >
                 <YouTubeIcon sx={{ color: '#FFFFFF', fontSize: 18 }} />
               </IconButton>
+
               <IconButton
                 component="a"
                 href={foundationData.contact.socialLinks.whatsapp}
@@ -133,7 +137,7 @@ export const Footer = () => {
           </Grid>
 
           {/* Column 2: Quick Links */}
-          <Grid item xs={12} sm={6} md={2.5} lg={2.5}>
+          <Grid item xs={12} sm={6} md={2.8} lg={2.5}>
             <Typography
               variant="subtitle1"
               sx={{
@@ -185,7 +189,7 @@ export const Footer = () => {
           </Grid>
 
           {/* Column 3: Key Initiatives */}
-          <Grid item xs={12} sm={6} md={2.5} lg={2.5}>
+          <Grid item xs={12} sm={6} md={2.8} lg={2.8}>
             <Typography
               variant="subtitle1"
               sx={{
@@ -201,12 +205,12 @@ export const Footer = () => {
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.2 }}>
               {[
-                'Anbu Higher Ed Scholarship',
-                'Inclusive Education Wing',
-                'Govt School Adoption',
-                'Rural Skill & Solar Workshops',
-                'Cosmetology for Women',
-                'Joy of Giving Relief',
+                'Anbu Scholarship',
+                'Inclusive Education',
+                'School Supporting Programs',
+                'Rural Development',
+                'Skill Development',
+                'Joy of Giving',
               ].map((prog) => (
                 <MuiLink
                   key={prog}
@@ -236,12 +240,12 @@ export const Footer = () => {
           </Grid>
 
           {/* Column 4: Contact Details with Left Border Divider */}
-          <Grid item xs={12} sm={6} md={4} lg={4}>
+          <Grid item xs={12} sm={6} md={3.2} lg={3.7}>
             <Box
               sx={{
                 borderLeft: { md: '2px solid rgba(255, 255, 255, 0.4)' },
-                pl: { md: 4 },
-                pr: { md: 0 },
+                pl: { md: 3.5, lg: 4 },
+                pr: 0,
                 width: '100%',
               }}
             >
