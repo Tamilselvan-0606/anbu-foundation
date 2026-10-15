@@ -79,10 +79,10 @@ export const Announcements = () => {
                 border: '1.5px solid rgba(8, 1, 49, 0.08)',
               }}
             >
-              <Typography variant="h5" sx={{ fontWeight: 600, color: '#FFFFFF', mb: 1.5 }}>
+              <Typography variant="h5" sx={{ fontWeight: 600, color: '#080131', mb: 1.5 }}>
                 No Announcements Found
               </Typography>
-              <Typography variant="body2" sx={{ color: '#FFFFFF', opacity: 0.9, mb: 3 }}>
+              <Typography variant="body2" sx={{ color: '#666666', mb: 3 }}>
                 We could not find any active notices matching your current search terms or category selection.
               </Typography>
               <Button
@@ -104,8 +104,12 @@ export const Announcements = () => {
             <Box
               sx={{
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-                gap: 4,
+                gridTemplateColumns: {
+                  xs: '1fr',
+                  sm: 'repeat(2, 1fr)',
+                  md: 'repeat(4, 1fr)',
+                },
+                gap: 3,
               }}
             >
               {filteredAnnouncements.map((ann) => (

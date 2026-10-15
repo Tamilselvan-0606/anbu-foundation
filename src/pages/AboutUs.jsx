@@ -50,56 +50,95 @@ export const AboutUs = () => {
             sx={{
               display: 'flex',
               flexDirection: { xs: 'column', md: 'row' },
-              alignItems: 'center',
+              alignItems: 'stretch',
               justifyContent: 'space-between',
-              gap: { xs: 5, md: 6 },
+              gap: { xs: 4, md: 5 },
               width: '100%',
             }}
           >
-            <Box sx={{ flex: { xs: "1 1 100%", md: "0 0 54%", lg: "0 0 55%" }, width: "100%" }}>
-              <Box
+            <Box sx={{ flex: { xs: "1 1 100%", md: "0 0 54%", lg: "0 0 55%" }, width: "100%", display: 'flex' }}>
+              <Card
                 sx={{
-                  display: 'inline-block',
                   backgroundColor: '#002c62',
                   color: '#FFFFFF',
-                  px: 2,
-                  py: 0.6,
-                  borderRadius: '20px',
-                  fontSize: '0.82rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  mb: 2,
-                  border: '1.5px solid rgba(8, 1, 49, 0.08)',
+                  borderRadius: 0,
+                  p: { xs: 3.5, sm: 5 },
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 16px 40px rgba(0, 44, 98, 0.25)',
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
                 }}
               >
-                Inception & Legacy
-              </Box>
+                <Box
+                  sx={{
+                    display: 'inline-block',
+                    backgroundColor: '#faf6ef',
+                    color: '#002c62',
+                    px: 2,
+                    py: 0.6,
+                    borderRadius: 0,
+                    fontSize: '0.82rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    mb: 2,
+                    alignSelf: 'flex-start',
+                    border: '1px solid rgba(8, 1, 49, 0.12)',
+                  }}
+                >
+                  Inception & Legacy
+                </Box>
 
-              <Typography
-                variant="h2"
-                sx={{
-                  fontWeight: 600,
-                  fontSize: { xs: '2rem', sm: '2.5rem', md: '2.8rem' },
-                  color: '#080131',
-                  lineHeight: 1.2,
-                  mb: 3,
-                }}
-              >
-                Our Story: From a Bud of Compassion to a Garden of Hope
-              </Typography>
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontWeight: 600,
+                    fontSize: { xs: '2rem', sm: '2.4rem', md: '2.6rem' },
+                    color: '#FFFFFF',
+                    lineHeight: 1.2,
+                    mb: 3,
+                  }}
+                >
+                  Foundation
+                </Typography>
 
-              <Typography variant="body1" sx={{ color: '#080131', opacity: 0.95, lineHeight: 1.75, mb: 2.5 }}>
-                Anbu Foundation was started with a heartfelt philosophy: to bring back happiness to the lives of people who are striving to live life to the fullest. Inherited from the philanthropic ideals of parents, the first bud sprouted in 2006, and has now flourished into a vibrant sanctuary of learning and human empowerment.
-              </Typography>
+                <Typography variant="body1" sx={{ color: '#FFFFFF', opacity: 0.92, lineHeight: 1.75, mb: 2.5 }}>
+                  The inception of this idea to serve all is inherited from parents, 2008 had witnessed the first bud in and now it is a garden of happiness with the fragrance of success. The time to share the fruits to all has been arrived in this year of 2016, so the foundation is determined to extend its branches to all directions of enriching human value, where our service is atmost needed.
+                </Typography>
 
-              <Typography variant="body1" sx={{ color: '#080131', opacity: 0.95, lineHeight: 1.75, mb: 2.5 }}>
-                Rooted within Sathyabama Institute of Science and Technology, the foundation operates under the principle of "Answering the Unanswered" — proactively identifying systemic gaps where deserving minds are held back solely by socio-economic challenges.
-              </Typography>
+                <Box
+                  sx={{
+                    backgroundColor: '#faf6ef',
+                    borderRadius: 0,
+                    border: '1px solid rgba(8, 1, 49, 0.12)',
+                    p: { xs: 2, sm: 2.2 },
+                    my: 2.5,
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: '#002c62',
+                      fontWeight: 600,
+                      fontStyle: 'italic',
+                      lineHeight: 1.7,
+                      fontSize: '0.98rem',
+                    }}
+                  >
+                    Integrity in ideation, Introspection in planning and Involvement in execution are principles of our foundation.
+                  </Typography>
+                </Box>
 
-              <Typography variant="body1" sx={{ color: '#080131', opacity: 0.92, lineHeight: 1.75 }}>
-                By establishing robust partnerships with community leaders, government schools, and specialized welfare trusts, Anbu Foundation provides transparency, dignity, and sustainable educational upliftment across generations.
-              </Typography>
+                <Typography variant="body1" sx={{ color: '#FFFFFF', opacity: 0.92, lineHeight: 1.75, mb: 2.5 }}>
+                  To experience the sunrise we should turn towards rising sun. To experience the impact of service to people in complete sense, we should interact and interlace with their lives.
+                </Typography>
+
+                <Typography variant="body1" sx={{ color: '#FFFFFF', opacity: 0.92, lineHeight: 1.75 }}>
+                  School adoption, Village adoption and many such programs are an embodiment of selflessness and has the objectives as longevity, freedom and peace. We welcome you to this home of love - Anbu.
+                </Typography>
+              </Card>
             </Box>
 
             <Box
@@ -114,32 +153,34 @@ export const AboutUs = () => {
                 sx={{
                   backgroundColor: '#FFFFFF',
                   color: '#000000',
-                  borderRadius: '16px',
+                  borderRadius: 0,
                   overflow: 'hidden',
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
                   boxShadow: '0 16px 40px rgba(8, 1, 49, 0.12)',
                 }}
               >
-                <Box sx={{ height: 320, overflow: 'hidden' }}>
+                <Box sx={{ height: { xs: 280, sm: 340, md: 360 }, overflow: 'hidden', borderRadius: 0 }}>
                   <Box
                     component="img"
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
-                    alt="University Academic Mentorship"
+                    src="/images/image-1.jpeg"
+                    alt="Anbu Foundation Leadership"
                     sx={{
                       width: '100%',
                       height: '100%',
+                      borderRadius: 0,
                       objectFit: 'cover',
+                      objectPosition: 'center top',
                       transition: 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)',
                       '&:hover': { transform: 'scale(1.05)' },
                     }}
                   />
                 </Box>
-                <CardContent sx={{ p: 4 }}>
+                <CardContent sx={{ p: { xs: 3, sm: 3.5 } }}>
                   <Typography variant="h5" sx={{ fontWeight: 600, color: '#000000', mb: 1 }}>
-                    18 Years of Transformative Service
+                    Home of Love — Anbu
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#333333', lineHeight: 1.75 }}>
-                    "Anbu Scholarship is more than financial aid; it is a beacon of hope for students who dare to dream beyond their circumstances."
+                    "To experience the impact of service to people in complete sense, we should interact and interlace with their lives."
                   </Typography>
                 </CardContent>
               </Card>
@@ -187,7 +228,7 @@ export const AboutUs = () => {
                 sx={{
                   backgroundColor: '#FFFFFF',
                   color: '#000000',
-                  borderRadius: '18px',
+                  borderRadius: 0,
                   p: { xs: 3.5, md: 5 },
                   width: '100%',
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
@@ -205,7 +246,7 @@ export const AboutUs = () => {
                   sx={{
                     width: 60,
                     height: 60,
-                    borderRadius: '14px',
+                    borderRadius: '50%',
                     backgroundColor: '#002c62',
                     display: 'flex',
                     alignItems: 'center',
@@ -217,7 +258,7 @@ export const AboutUs = () => {
                 </Box>
 
                 <Typography variant="h4" sx={{ fontWeight: 600, color: '#000000', mb: 2 }}>
-                  Our Vision
+                  Vision
                 </Typography>
 
                 <Typography variant="body1" sx={{ color: '#333333', lineHeight: 1.8, fontSize: '1.05rem' }}>
@@ -239,7 +280,7 @@ export const AboutUs = () => {
                 sx={{
                   backgroundColor: '#FFFFFF',
                   color: '#000000',
-                  borderRadius: '18px',
+                  borderRadius: 0,
                   p: { xs: 3.5, md: 5 },
                   width: '100%',
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
@@ -257,7 +298,7 @@ export const AboutUs = () => {
                   sx={{
                     width: 60,
                     height: 60,
-                    borderRadius: '14px',
+                    borderRadius: '50%',
                     backgroundColor: '#002c62',
                     display: 'flex',
                     alignItems: 'center',
@@ -269,7 +310,7 @@ export const AboutUs = () => {
                 </Box>
 
                 <Typography variant="h4" sx={{ fontWeight: 600, color: '#000000', mb: 2 }}>
-                  Our Mission
+                  Mission
                 </Typography>
 
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.8 }}>
@@ -328,22 +369,22 @@ export const AboutUs = () => {
           >
             {[
               {
-                icon: <VolunteerActivismIcon sx={{ fontSize: 34, color: '#FFFFFF' }} />,
+                icon: <VolunteerActivismIcon sx={{ fontSize: 34, color: '#002c62' }} />,
                 title: 'Compassion (Anbu)',
                 desc: 'Rooting every institutional decision in genuine care, understanding, and personal empathy for student struggles.',
               },
               {
-                icon: <Diversity3Icon sx={{ fontSize: 34, color: '#FFFFFF' }} />,
+                icon: <Diversity3Icon sx={{ fontSize: 34, color: '#002c62' }} />,
                 title: 'Inclusive Dignity',
                 desc: 'Championing accessible environments where visually challenged learners and acid attack survivors study with unconditional pride.',
               },
               {
-                icon: <EmojiObjectsIcon sx={{ fontSize: 34, color: '#FFFFFF' }} />,
+                icon: <EmojiObjectsIcon sx={{ fontSize: 34, color: '#002c62' }} />,
                 title: 'Empowerment Through Skill',
                 desc: 'Going beyond one-time charity by cultivating practical, future-ready technical and vocational abilities.',
               },
               {
-                icon: <HandshakeIcon sx={{ fontSize: 34, color: '#FFFFFF' }} />,
+                icon: <HandshakeIcon sx={{ fontSize: 34, color: '#002c62' }} />,
                 title: 'Integrity & Transparency',
                 desc: 'Maintaining rigorous, transparent selection criteria so every benefit reaches the most deserving applicants.',
               },
@@ -351,23 +392,28 @@ export const AboutUs = () => {
               <Card
                 key={idx}
                 sx={{
-                  backgroundColor: '#FFFFFF',
-                  color: '#000000',
-                  borderRadius: '16px',
+                  backgroundColor: '#002c62',
+                  color: '#FFFFFF',
+                  borderRadius: 0,
                   p: 3.5,
                   height: '100%',
-                  border: '1.5px solid rgba(8, 1, 49, 0.08)',
-                  boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 8px 30px rgba(0, 44, 98, 0.22)',
                   display: 'flex',
                   flexDirection: 'column',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 16px 40px rgba(0, 44, 98, 0.32)',
+                  },
                 }}
               >
                 <Box
                   sx={{
                     width: 56,
                     height: 56,
-                    borderRadius: '12px',
-                    backgroundColor: '#002c62',
+                    borderRadius: '50%',
+                    backgroundColor: '#faf6ef',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -376,10 +422,10 @@ export const AboutUs = () => {
                 >
                   {val.icon}
                 </Box>
-                <Typography variant="h5" sx={{ fontWeight: 600, color: '#000000', mb: 1.5, fontSize: '1.25rem' }}>
+                <Typography variant="h5" sx={{ fontWeight: 600, color: '#FFFFFF', mb: 1.5, fontSize: '1.25rem' }}>
                   {val.title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#333333', lineHeight: 1.75 }}>
+                <Typography variant="body2" sx={{ color: '#FFFFFF', opacity: 0.9, lineHeight: 1.75 }}>
                   {val.desc}
                 </Typography>
               </Card>
@@ -388,7 +434,7 @@ export const AboutUs = () => {
         </Container>
       </Box>
 
-      {/* SECTION 4: OUR APPROACH (Background: #f4f4f2) */}
+      {/* SECTION 4: FOUNDATION DESK (Background: #f4f4f2) */}
       <Box
         sx={{
           backgroundColor: '#f4f4f2',
@@ -399,238 +445,200 @@ export const AboutUs = () => {
       >
         <Container maxWidth="xl">
           <SectionHeading
-            badge="Systemic Execution"
-            title="Our Strategic Approach"
-            subtitle="A cohesive three-pillar framework connecting student potential with long-term socio-economic self-reliance."
+            badge="Leadership Message"
+            title="Foundation Desk"
+            subtitle="An inspirational message from our founders on the enduring spirit of service and humanity."
             textColor="#080131"
           />
 
           <Box
             sx={{
-              display: 'grid',
-              gridTemplateColumns: {
-                xs: '1fr',
-                md: 'repeat(3, 1fr)',
-              },
-              gap: 4,
+              display: 'flex',
+              flexDirection: { xs: 'column', lg: 'row' },
+              alignItems: 'stretch',
+              gap: { xs: 4, lg: 6 },
               width: '100%',
             }}
           >
-            {[
-              {
-                step: 'Pillar 01',
-                title: 'Identify & Remove Barriers',
-                image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80',
-                desc: 'Conducting transparent merit-cum-means identification to ensure no capable student is forced to discontinue studies due to economic distress.',
-                details: 'Our grassroots verification committee collaborates with government schools and district education offices to evaluate genuine need. Over 1,200 eligible students undergo standardized screening each year, guaranteeing unbiased and prompt tuition fee coverage, free campus boarding, and academic learning kits.',
-              },
-              {
-                step: 'Pillar 02',
-                title: 'Nurture & Upskill',
-                image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80',
-                desc: 'Providing collegiate mentoring, modern assistive lab access, certified vocational courses, and professional aptitude training throughout their tenure.',
-                details: 'Scholars are integrated into university research clusters, dedicated assistive screen-reader labs, and coding academies. Weekly personalized faculty counseling and career soft-skills workshops ensure 100% placement readiness upon graduation.',
-              },
-              {
-                step: 'Pillar 03',
-                title: 'Give Back & Pay Forward',
-                image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=700&q=80',
-                desc: 'Inspiring scholarship alumni and university student volunteers to teach in adopted schools, conduct rural workshops, and mentor subsequent cohorts.',
-                details: 'Every beneficiary becomes an active ambassador of positive social change. Through weekend educational outreach and rural village adoption drives, alumni return to train juniors and conduct digital literacy drives across 20+ partner villages.',
-              },
-            ].map((approach, idx) => (
-              <Box
-                key={idx}
-                component={motion.div}
-                initial={{ opacity: 0, y: 35, scale: 0.96 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: '-50px' }}
-                transition={{ duration: 0.55, delay: idx * 0.12, ease: [0.25, 0.8, 0.25, 1] }}
-                sx={{ height: '100%' }}
+            {/* Left: Founders Portrait Card */}
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, x: -35 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, ease: [0.25, 0.8, 0.25, 1] }}
+              sx={{
+                flex: { xs: '1 1 100%', lg: '0 0 42%' },
+                width: '100%',
+                display: 'flex',
+              }}
+            >
+              <Card
+                sx={{
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 0,
+                  overflow: 'hidden',
+                  width: '100%',
+                  border: '1.5px solid rgba(8, 1, 49, 0.08)',
+                  boxShadow: '0 12px 36px rgba(8, 1, 49, 0.08)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
               >
-                <Card
-                  sx={{
-                    position: 'relative',
-                    borderRadius: '16px',
-                    overflow: 'hidden',
-                    height: 400,
-                    boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
-                    border: '1.5px solid rgba(8, 1, 49, 0.08)',
-                    cursor: 'pointer',
-                    transition: 'transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease',
-                    '&:hover': {
-                      transform: 'translateY(-6px)',
-                      boxShadow: '0 16px 45px rgba(8, 1, 49, 0.16)',
-                      '& .card-bg-image': {
-                        transform: 'scale(1.08)',
-                      },
-                      '& .hover-overlay': {
-                        opacity: 1,
-                        visibility: 'visible',
-                      },
-                      '& .hover-content': {
-                        transform: 'translateY(0)',
-                        opacity: 1,
-                      },
-                      '& .initial-card-view': {
-                        opacity: 0,
-                        transform: 'translateY(-8px)',
-                      },
-                    },
-                  }}
-                >
-                {/* 1. Full Image Background */}
                 <Box
-                  className="card-bg-image"
-                  component="img"
-                  src={approach.image}
-                  alt={approach.title}
                   sx={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
                     width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block',
-                    transition: 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                  }}
-                />
-
-                {/* 2. Default Subtle Gradient & Initial View */}
-                <Box
-                  className="initial-card-view"
-                  sx={{
-                    position: 'absolute',
-                    inset: 0,
-                    background: 'linear-gradient(to bottom, rgba(8, 1, 49, 0.55) 0%, rgba(8, 1, 49, 0) 35%, rgba(8, 1, 49, 0.75) 100%)',
-                    p: 3,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    transition: 'opacity 0.35s ease, transform 0.35s ease',
-                    pointerEvents: 'none',
+                    height: { xs: 440, sm: 540, lg: '100%' },
+                    minHeight: { lg: 580 },
+                    overflow: 'hidden',
+                    borderRadius: 0,
+                    position: 'relative',
                   }}
                 >
                   <Box
+                    component="img"
+                    src="/images/image-2.jpg"
+                    alt="Dr. Marie Johnson & Dr. Mariazeena Johnson"
                     sx={{
-                      display: 'inline-block',
-                      backgroundColor: '#002c62',
-                      color: '#FFFFFF',
-                      px: 2,
-                      py: 0.6,
-                      borderRadius: '6px',
-                      fontSize: '0.82rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.05em',
-                      textTransform: 'uppercase',
-                      alignSelf: 'flex-start',
-                      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.25)',
-                    }}
-                  >
-                    {approach.step}
-                  </Box>
-
-                  <Typography
-                    variant="h5"
-                    component="h3"
-                    sx={{
-                      fontWeight: 700,
-                      color: '#FFFFFF',
-                      fontSize: { xs: '1.25rem', md: '1.4rem' },
-                      lineHeight: 1.3,
-                      textShadow: '0 2px 10px rgba(0,0,0,0.85)',
-                    }}
-                  >
-                    {approach.title}
-                  </Typography>
-                </Box>
-
-                {/* 3. Hover Overlay with #002c62 color transition and animated reveal */}
-                <Box
-                  className="hover-overlay"
-                  sx={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundColor: '#002c62',
-                    opacity: 0,
-                    visibility: 'hidden',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    p: { xs: 3, sm: 3.5 },
-                    transition: 'opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s ease',
-                  }}
-                >
-                  <Box
-                    className="hover-content"
-                    sx={{
-                      display: 'flex',
-                      flexDirection: 'column',
+                      width: '100%',
                       height: '100%',
-                      justifyContent: 'center',
-                      transform: 'translateY(20px)',
-                      opacity: 0,
-                      transition: 'transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) 0.05s, opacity 0.45s ease 0.05s',
+                      borderRadius: 0,
+                      objectFit: 'cover',
+                      objectPosition: 'center 20%',
+                      display: 'block',
+                      transition: 'transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)',
+                      '&:hover': { transform: 'scale(1.03)' },
                     }}
-                  >
-                    <Typography
-                      sx={{
-                        color: '#FFFFFF',
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.1em',
-                        mb: 1,
-                        opacity: 0.9,
-                      }}
-                    >
-                      {approach.step}
-                    </Typography>
-
-                    <Typography
-                      variant="h4"
-                      component="h3"
-                      sx={{
-                        fontWeight: 700,
-                        color: '#FFFFFF',
-                        fontSize: { xs: '1.25rem', md: '1.4rem' },
-                        lineHeight: 1.3,
-                        mb: 1.5,
-                      }}
-                    >
-                      {approach.title}
-                    </Typography>
-
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: '#FFFFFF',
-                        fontWeight: 600,
-                        lineHeight: 1.6,
-                        fontSize: '0.92rem',
-                        mb: 1.5,
-                      }}
-                    >
-                      {approach.desc}
-                    </Typography>
-
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: '#FFFFFF',
-                        opacity: 0.92,
-                        lineHeight: 1.6,
-                        fontSize: '0.85rem',
-                      }}
-                    >
-                      {approach.details}
-                    </Typography>
-                  </Box>
+                  />
                 </Box>
               </Card>
-              </Box>
-            ))}
+            </Box>
+
+            {/* Right: Desk Message & Founders Info */}
+            <Box
+              component={motion.div}
+              initial={{ opacity: 0, x: 35 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.65, delay: 0.1, ease: [0.25, 0.8, 0.25, 1] }}
+              sx={{
+                flex: { xs: '1 1 100%', lg: '0 0 54%' },
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+              }}
+            >
+              <Card
+                sx={{
+                  backgroundColor: '#002c62',
+                  color: '#FFFFFF',
+                  borderRadius: 0,
+                  p: { xs: 3.5, sm: 5 },
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 16px 40px rgba(0, 44, 98, 0.25)',
+                }}
+              >
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: { xs: '1.45rem', sm: '1.8rem', md: '2.05rem' },
+                    color: '#FFFFFF',
+                    lineHeight: 1.3,
+                    mb: 3,
+                  }}
+                >
+                  "Welcome to the home of Love" — Anbu!
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: '#FFFFFF',
+                    opacity: 0.92,
+                    fontSize: '0.98rem',
+                    lineHeight: 1.8,
+                    mb: 2.2,
+                  }}
+                >
+                  Most intrinsic feeling of Life is being Human. Humanity is not an act; it is the way of living. The cause of suffering in people has many reasons but the effect is unique and it is painful. Struggle for Education, Struggle for Survival and Struggle to Empower Self and Nation.
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: '#FFFFFF',
+                    opacity: 0.92,
+                    fontSize: '0.98rem',
+                    lineHeight: 1.8,
+                    mb: 2.2,
+                  }}
+                >
+                  Anbu Foundation was started to bring back the happiness to the lives of people who are striving to live the life to the fullest. ANBU is committed to serve the Nation with a phenomenon of “Answering the Unanswered” by means of well-established structure. Our agenda of service is imbibed with share love to all.
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: '#FFFFFF',
+                    opacity: 0.92,
+                    fontSize: '0.98rem',
+                    lineHeight: 1.8,
+                    mb: 3.5,
+                  }}
+                >
+                  The framework of the foundation is an aforethought to strengthen the lives of fellow citizens and thereby lifting the spirit of living, which is vital to the development of our Nation. We welcome you to this home of love - Anbu.
+                </Typography>
+
+                {/* Founders Leadership Details */}
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6}>
+                    <Box
+                      sx={{
+                        p: 2.5,
+                        backgroundColor: '#faf6ef',
+                        borderRadius: 0,
+                        border: '1px solid rgba(8, 1, 49, 0.08)',
+                        height: '100%',
+                      }}
+                    >
+                      <Typography variant="h6" sx={{ fontWeight: 700, color: '#002c62', fontSize: '1.05rem', mb: 0.5 }}>
+                        Dr. Marie Johnson
+                      </Typography>
+                      <Typography variant="body2" sx={{ fontWeight: 600, color: '#080131', mb: 0.5 }}>
+                        Founder, Anbu Foundation
+                      </Typography>
+                      <Typography variant="caption" sx={{ color: '#555555', display: 'block', lineHeight: 1.45 }}>
+                        President, Sathyabama Institute of Science and Technology
+                      </Typography>
+                    </Box>
+                  </Grid>
+
+                  <Grid item xs={12} sm={6}>
+                    <Box
+                      sx={{
+                        p: 2.5,
+                        backgroundColor: '#faf6ef',
+                        borderRadius: 0,
+                        border: '1px solid rgba(8, 1, 49, 0.08)',
+                        height: '100%',
+                      }}
+                    >
+                      <Typography variant="h6" sx={{ fontWeight: 700, color: '#002c62', fontSize: '1.05rem', mb: 0.5 }}>
+                        Dr. Mariazeena Johnson
+                      </Typography>
+                      <Typography variant="body2" sx={{ fontWeight: 600, color: '#080131', mb: 0.5 }}>
+                        Founder, Anbu Foundation
+                      </Typography>
+                      <Typography variant="caption" sx={{ color: '#555555', display: 'block', lineHeight: 1.45 }}>
+                        Chancellor, Sathyabama Institute of Science and Technology
+                      </Typography>
+                    </Box>
+                  </Grid>
+                </Grid>
+              </Card>
+            </Box>
           </Box>
         </Container>
       </Box>
@@ -649,7 +657,7 @@ export const AboutUs = () => {
             sx={{
               backgroundColor: '#FFFFFF',
               color: '#000000',
-              borderRadius: '24px',
+              borderRadius: 0,
               p: { xs: 4, md: 7 },
               border: '1.5px solid rgba(8, 1, 49, 0.08)',
               boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
@@ -686,7 +694,7 @@ export const AboutUs = () => {
                   py: 1.5,
                   fontSize: '1rem',
                   fontWeight: 700,
-                  borderRadius: '8px',
+                  borderRadius: 0,
                   border: '1.5px solid #002c62',
                   '&:hover': {
                     backgroundColor: '#002c62',
@@ -707,7 +715,7 @@ export const AboutUs = () => {
                   py: 1.5,
                   fontSize: '1rem',
                   fontWeight: 700,
-                  borderRadius: '8px',
+                  borderRadius: 0,
                   '&:hover': {
                     backgroundColor: '#002c62',
                   },

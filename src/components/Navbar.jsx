@@ -40,16 +40,20 @@ export const Navbar = () => {
 
   return (
     <AppBar
-      position="sticky"
+      position="fixed"
       elevation={0}
       sx={{
+        top: 0,
+        left: 0,
+        right: 0,
         backgroundColor: '#002c62',
         borderBottom: '1px solid rgba(255, 255, 255, 0.12)',
-        zIndex: 1200,
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+        zIndex: 1300,
       }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ minHeight: { xs: 70, md: 80 }, display: 'flex', justifyContent: 'space-between' }}>
+        <Toolbar disableGutters sx={{ minHeight: { xs: 76, md: 88 }, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           {/* Logo Branding */}
           <Box
             onClick={() => navigate('/')}
@@ -66,8 +70,9 @@ export const Navbar = () => {
               src="/images/image.png"
               alt="Anbu Foundation"
               sx={{
-                height: { xs: 42, sm: 48, md: 54 },
+                height: { xs: 52, sm: 60, md: 68 },
                 width: 'auto',
+                maxWidth: '100%',
                 objectFit: 'contain',
                 display: 'block',
               }}

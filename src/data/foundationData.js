@@ -12,12 +12,12 @@ export const foundationData = {
   aboutExcerpt: "Anbu Foundation was established in 2006 to bring back happiness to the lives of people striving to live life to the fullest. Rooted in the belief that education is the most powerful catalyst for social upliftment, ANBU is committed to 'Answering the Unanswered' through structured educational, healthcare, and rural empowerment initiatives.",
   vision: "To build a society where every individual, irrespective of economic or social background, has access to quality education, healthcare, livelihood opportunities, and a life of dignity through compassionate service and sustainable development.",
   mission: [
-    "Promoting quality education for deserving and underprivileged students through scholarships and academic mentorship.",
-    "Supporting healthcare initiatives and inclusive learning environments for specially challenged groups.",
-    "Empowering rural and marginalized communities through sustainable skill development programs.",
-    "Encouraging youth leadership, innovation, and social responsibility across institutions.",
-    "Preserving environmental resources through community awareness and active conservation programs.",
-    "Creating equal opportunities that foster inclusive growth, equity, and human dignity."
+    "Promoting quality education for deserving and underprivileged students.",
+    "Supporting healthcare initiatives that improve community well-being.",
+    "Empowering rural and marginalized communities through sustainable development.",
+    "Encouraging youth leadership, innovation, and social responsibility.",
+    "Preserving environmental resources through awareness and conservation programs.",
+    "Creating equal opportunities that foster inclusive growth and human dignity."
   ],
   coreValues: [
     {
@@ -60,140 +60,160 @@ export const foundationData = {
 export const initiativesData = [
   {
     id: "anbu-scholarship",
-    title: "Anbu Scholarship Scheme",
-    category: "Educational Support",
-    shortDesc: "Financial assistance and holistic academic support for meritorious, underprivileged students pursuing higher education.",
-    fullDesc: "Established to remove financial barriers, the Anbu Scholarship covers tuition and learning material support for deserving candidates across arts, science, and engineering disciplines at Sathyabama and affiliated programs.",
-    beneficiaries: "Meritorious students from economically marginalized backgrounds",
+    title: "Anbu Scholarship",
+    category: "Anbu Scholarship",
+    tagline: "Getting Education is the Basic Right Protecting this Right is our Basic Duty",
+    shortDesc: "The Scholarship is offered for children who are meritorious and lacking financial support to continue their education.",
+    fullDesc: "The Scholarship is offered for children who are meritorious and lacking financial support to continue their education. The foundation is associated with many trusts and peer foundations to offer this scholarship with higher degree of transparency and productivity: Agaram foundation, World vision, Indiavision, Ability foundation, Banyan, NAAM, Maatram and Tamilnadu Blind Association.\n\nIn addition to this, scholarship is offered for Army students, destitute women children, war-widow children and to the children of drivers in our University. The screening is carried out by a well-structured mechanism that takes into account factors such as Family situation, Board examination performance and an entrance exam conducted by the Foundation.",
+    beneficiaries: "Meritorious students lacking financial support, Army students, destitute women children, war-widow children, and children of university drivers",
+    videoUrl: "https://www.youtube.com/watch?v=K4mWKqTwZhE",
+    videoEmbedUrl: "https://www.youtube.com/embed/K4mWKqTwZhE",
     activities: [
-      "Tuition assistance and fee waiver programs",
-      "Academic book bank and learning resources distribution",
-      "One-on-one faculty mentorship & tutoring",
-      "Career preparation and campus readiness workshops"
+      "Tuition assistance and comprehensive fee waivers",
+      "Partnership with Agaram, Maatram, World Vision, NAAM & Ability Foundation",
+      "Special quota for war-widow children, Army students & university driver families",
+      "Structured screening through board marks, family assessment & entrance exams"
     ],
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-10.jpg"
   },
   {
     id: "inclusive-education",
-    title: "Inclusive Education Program",
-    category: "Empowerment & Inclusion",
-    shortDesc: "Dedicated educational tracks, assistive devices, and dignity-first opportunities for visually impaired students and acid attack survivors.",
-    fullDesc: "Anbu Foundation's flagship inclusion drive offers tailored academic facilities, specialized audio-learning tech, accessible labs, and psychological counseling, enabling students with diverse abilities to thrive in higher education.",
-    beneficiaries: "Visually impaired individuals, acid attack survivors, and specially challenged learners",
+    title: "Inclusive Education",
+    category: "Inclusive Education",
+    tagline: "Togetherness is the tool for better tomorrow",
+    shortDesc: "Hundreds of disabled, underprivileged students are offered education every year at Sathyabama Institute of Science and Technology, with inclusiveness embedded in every aspect of training.",
+    fullDesc: "Education is the only aspect that is equally significant as Breath for everyone. Education need not be formal; everyday offers many learning laps for us to evolve as a better human being. Any form of education should install the sense of progress.\n\nAnbu is blessed with an excellent platform in the form of our University in offering education embedded with inclusiveness. Hundreds of disabled, underprivileged students are offered education every year. Inculcating inclusivity among students is an integrated method of our training at Sathyabama Institute of Science and Technology.\n\nApart from this, we are also associated and have numerous collaborations with many contemporary service organizations, so that the opportunity to help becomes more divergent. Our belief is \"Togetherness is the tool for better tomorrow\".",
+    beneficiaries: "Disabled and underprivileged students, visually impaired learners, and students from marginalized backgrounds at Sathyabama Institute of Science and Technology",
+    videoUrl: "https://www.youtube.com/watch?v=synNfUV09Sg",
+    videoEmbedUrl: "https://www.youtube.com/embed/synNfUV09Sg",
     activities: [
-      "Braille and screen-reader enabled digital learning suites",
-      "Pinkathon & awareness marathons championing student resilience",
-      "Skill certification and independent living workshops",
-      "Psychosocial peer counseling and rehabilitation aid"
+      "Education embedded with inclusiveness at university level",
+      "Collaborations with contemporary service organizations",
+      "Integrated inclusivity training for all students",
+      "Support for hundreds of disabled & underprivileged students annually"
     ],
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-15.jpg"
   },
   {
     id: "school-support",
-    title: "Government School Adoption Program",
-    category: "Academic Enrichment",
-    shortDesc: "Upgrading rural and government schools with modern science labs, smart classrooms, sanitation facilities, and teaching aids.",
-    fullDesc: "By adopting primary and secondary government schools in neighboring districts, Anbu Foundation bridges the infrastructure and foundational learning divide through structural upgrades and student engagement.",
-    beneficiaries: "Government school students and rural teaching faculty",
+    title: "School Supporting Programs",
+    category: "School Supporting Programs",
+    tagline: "Teach to a teacher, you are teaching many students Support a School; you are supporting future of Society",
+    shortDesc: "Anbu is active in school supporting programs across government schools in and around Chennai, supporting basic amenities, smart learning infrastructure, and student development.",
+    fullDesc: "Anbu is active in school supporting programs. Some of them are Government schools belong to Nallambakkam, Hastinapuram, Ezhilnagar, Kannaginagar, Karappakkam and Sholinganallur areas in and around Chennai.\n\nWe support these schools in the establishment of basic amenities, infrastructure pertaining to smart learning besides conducting many literary events, sports and personality development workshops.",
+    beneficiaries: "Students and teachers in government schools across Nallambakkam, Hastinapuram, Ezhilnagar, Kannaginagar, Karappakkam and Sholinganallur areas",
+    videoUrl: "https://www.youtube.com/watch?v=WWeU-B8HVI0",
+    videoEmbedUrl: "https://www.youtube.com/embed/WWeU-B8HVI0",
     activities: [
-      "Modernization of school libraries and computer workstations",
-      "Clean water filter installations and hygiene sanitation blocks",
-      "Weekly STEM interactive sessions led by university student volunteers",
-      "Annual sports days and stationery kit distributions"
+      "Establishment of basic amenities in government schools",
+      "Smart learning infrastructure and classroom upgrades",
+      "Literary events and reading enrichment programs",
+      "Sports and personality development workshops"
     ],
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-20.jpg"
   },
   {
     id: "rural-development",
-    title: "Rural Development & Livelihood Initiative",
-    category: "Community Engagement",
-    shortDesc: "Holistic village adoption focusing on health camps, vocational training for self-help groups, and clean village programs.",
-    fullDesc: "Empowering rural families around Chennai and Kanchipuram through micro-enterprise support, health screenings, solar energy awareness, and community infrastructure building.",
-    beneficiaries: "Rural communities, agricultural households, and youth",
+    title: "Rural Development",
+    category: "Rural Development",
+    tagline: "India lives in its Villages - Mahatma Gandhi",
+    shortDesc: "Anbu stepped into rural development by adopting villages and improving living conditions in sub-urban areas, empowering communities through organic farming, women's programs, and unique learning initiatives.",
+    fullDesc: "The progressive wheels of development possess smooth transit into future, when villages are empowered. Anbu assimilated this fact in its genome and stepped into rural development.\n\nNallambakkam, Ezhilnagar, Kannaginagar are adopted besides improving the conditions of living in slums of sub-urban areas such as Perumbakkam.",
+    beneficiaries: "Rural communities in Nallambakkam, Ezhilnagar, Kannaginagar and sub-urban slum areas like Perumbakkam; women in 10 villages of Kanchipuram district",
+    videoUrl: "https://www.youtube.com/watch?v=synNfUV09Sg&t=1s",
+    videoEmbedUrl: "https://www.youtube.com/embed/synNfUV09Sg",
     activities: [
-      "Solar lamp making workshops for self-reliance and clean energy",
-      "Preventive medical camps with free consultations and medicines",
-      "Rainwater harvesting and organic farming awareness drives",
-      "Digital literacy kiosks for rural youth and elders"
+      "Setting up an organic vegetable farm inside school premises in Nallambakkam",
+      "Women empowerment programs in 10 villages in Kanchipuram district",
+      "My Saturday University – uplifting the spirit of learning among sub-urban students",
+      "Improving living conditions in slums of Perumbakkam and surrounding areas"
     ],
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-14.jpg"
   },
   {
     id: "skill-development",
-    title: "Vocational & Skill Development",
+    title: "Skill Development",
     category: "Skill Development",
-    shortDesc: "Certified diploma courses and practical vocational modules including Cosmetology for women, AI basics, and Full-Stack technology.",
-    fullDesc: "Empowering young adults and homemakers with market-ready vocational skills, equipping them for employment or entrepreneurial independence with structured diploma curricula.",
-    beneficiaries: "Women seeking financial independence, aspiring technologists, and young school leavers",
+    tagline: "Knowledge transforms into wisdom. Skill transforms into development.",
+    shortDesc: "Anbu is dedicated to preparing an efficient skill pool for society — training thousands of women and youth across Tamil Nadu through certified vocational programs and government-backed empowerment initiatives.",
+    fullDesc: "Our country has abundance of talent for this transformation to take place. We should offer enough motivation and assistance; Anbu is dedicated to prepare efficient skill pool for the society.\n\nTrained more than 2000 women in ten villages of Kanchipuram district on the courses of Mushroom cultivation, Seaweed Cultivation, Solar lamp making, Soap making, Jewellery making and Ornamental fish cultivation.\n\nDiploma course in \"Cosmetology\" and Diploma in Tailoring are offered to empower women with market-ready skills.\n\nInitiated a thematic convergence project titled \"Women Empowerment Bureau for the Kanchipuram district, TamilNadu\" sanctioned by the National Mission for Empowerment of Women (NMEW) under the Ministry of Women and Child Development and National Resource Centre for Women.\n\n\"SKILL HELPS TO LIVE\"",
+    beneficiaries: "Women in Kanchipuram district villages, aspiring youth, and homemakers seeking financial independence through vocational training",
+    videoUrl: "https://www.youtube.com/watch?v=YBNfXKn1128",
+    videoEmbedUrl: "https://www.youtube.com/embed/YBNfXKn1128",
     activities: [
-      "Diploma courses in Cosmetology & Wellness for women",
-      "Foundational coding and digital literacy bootcamps",
-      "Tailoring, handicraft, and micro-business certification",
-      "Campus placement drives and industry apprentice linkage"
+      "Trained 2000+ women in Mushroom, Seaweed & Ornamental fish cultivation",
+      "Solar lamp making, Soap making & Jewellery making workshops in 10 villages",
+      "Diploma in Cosmetology & Diploma in Tailoring for women",
+      "Women Empowerment Bureau project sanctioned by NMEW – Ministry of Women & Child Development"
     ],
-    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-19.jpg"
   },
   {
     id: "joy-of-giving",
-    title: "Joy of Giving & Nutrition Drive",
-    category: "Community Outreach",
-    shortDesc: "Community nutrition drives, seasonal warm clothes distributions, and disaster relief operations organized with student volunteers.",
-    fullDesc: "Anbu's humanitarian wing brings student volunteers together to distribute food, nutritional supplements, books, and emergency relief supplies to marginalized settlements and orphanages.",
-    beneficiaries: "Underprivileged children, destitute elder homes, and disaster-impacted families",
+    title: "Joy of Giving",
+    category: "Joy of Giving",
+    tagline: "Joy of giving is the Joy of living",
+    shortDesc: "The foundation extends its services to divergent sectors of society — offering food, healthcare and education to the most vulnerable communities across Tamil Nadu and beyond.",
+    fullDesc: "The foundation is extending its services to divergent sectors of the society. The prime services are offering food, healthcare and education.\n\nLunch is provided every day for the students of Little Hearts Residential School for the mentally Challenged in Mahabalipuram and Pudupakkam, St.Louis in Ponniammankoil and Banyan.\n\nFood is provided periodically for orphanages such as Pope George garden in Madhavaram, Friends home in Vellore (HIV affected people), Indira old age home in Injambakkam.\n\nEvery Saturday distributing fruits and necessary food to patients in Adyar Cancer Institute, Chennai.\n\nHealth care support for some of the children for cancer treatment in Meenakshi Mission Hospital of Madurai. Health care support for autism affected children in MOTHER AND CHILD WELFARE AND RESEARCH FOUNDATION INDIA of Kolkatta.\n\nHelping hand for the education of few children belongs to Saranya children home, Help a child of India, Pengal Samoogam Nala trust, Christian mission charitable trust and students from world vision.\n\nActive in offering needed assistance to Sumanahalli society, Smile foundation, Health First India (Leprosy relief work).",
+    beneficiaries: "Mentally challenged students, HIV affected people, cancer patients, autism-affected children, orphaned children, elderly in old age homes, and leprosy-affected individuals",
+    videoUrl: "https://www.youtube.com/watch?v=YBNfXKn1128",
+    videoEmbedUrl: "https://www.youtube.com/embed/YBNfXKn1128",
     activities: [
-      "Community food drives and nutrition support for undernourished kids",
-      "Annual Daan Utsav (Joy of Giving Week) campus collections",
-      "Disaster relief kits distribution during coastal flood emergencies",
-      "Support visits to partner destitute care centers"
+      "Daily lunch for Little Hearts School, St.Louis & Banyan – mentally challenged students",
+      "Periodic food support for orphanages & HIV-affected homes across Chennai & Vellore",
+      "Weekly fruit & food distribution at Adyar Cancer Institute every Saturday",
+      "Healthcare support for cancer & autism-affected children in Madurai & Kolkatta",
+      "Educational assistance via Saranya Home, World Vision & Pengal Samoogam Nala Trust",
+      "Support to Sumanahalli, Smile Foundation & Health First India (Leprosy relief)"
     ],
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-17.jpeg"
   }
 ];
 
 export const successStoriesData = [
   {
     id: "story-1",
-    name: "K. Malathi",
-    badge: "Scholarship Recipient",
-    category: "Inclusive Education",
-    achievement: "Completed Bachelor of Computer Applications with Distinction",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-    quote: "Anbu Foundation did not just fund my college tuition; their accessible audio material and mentors gave me the courage to code and build software independently.",
-    story: "Malathi, a visually impaired student from a rural township in Tamil Nadu, dreamed of working in technology. Through the Anbu Inclusive Education Program, she received complete scholarship coverage, a screen-reader equipped laptop, and dedicated peer assistance throughout her degree. Today, she works as an accessibility QA analyst.",
-    verifiedDate: "Class of 2023"
+    name: "Sabareeswari K.",
+    badge: "Anbu & Maatram",
+    category: "Scholarship Support",
+    achievement: "Pursuing Higher Education with Restored Hope and Confidence",
+    image: "/images/image-5.jpg",
+    quote: "Regained my confidence and faith about my future and career. My humble thanks to ANBU.",
+    story: "I lost my parents suddenly. I was very weak emotionally; I have lost my confidence and question marks everywhere in my life from basic necessities to continuing my education. In that situation, I came to know about this scholarship scheme provided by Anbu foundation through MAATRAM. Now, I am able to study without any trouble. Regained my confidence and faith about my future and career. My humble thanks to ANBU.",
+    verifiedDate: "Scholar"
   },
   {
     id: "story-2",
-    name: "R. Vignesh",
-    badge: "First-Generation Graduate",
+    name: "Dhivya V.",
+    badge: "Anbu & Agaram",
     category: "Higher Education",
-    achievement: "Secured Campus Placement as Software Engineer",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-    quote: "Being the first in my family to even attend university, the mentorship and financial peace of mind from Anbu Foundation completely transformed our family's future.",
-    story: "Coming from an agricultural worker's household, Vignesh faced severe financial hardship when entering engineering. Awarded the Anbu Scholarship in his first year, he excelled academically while mentoring younger students in the Saturday University initiative.",
-    verifiedDate: "Class of 2022"
+    achievement: "Studying ECE at Sathyabama with Campus Part-Time Opportunities",
+    image: "/images/image-7.jpg",
+    quote: "My life got completely changed after joining in Sathyabama University. This is because of the wonderful support given by ANBU and AGARAM.",
+    story: "I am Dhivya studying in ECE, the course which I dreamt to do. I have understood that their intention is not only to help students financially with the scholarship but more importantly to see them winning always. In the University, we are also offered with part-time jobs which we can do without disturbing our studies. Now my communication skills improved a lot and also economic status. My life got completely changed after joining in Sathyabama University. This is because of the wonderful support given by ANBU and AGARAM.",
+    verifiedDate: "ECE Scholar"
   },
   {
     id: "story-3",
-    name: "S. Priya & Community SHG",
-    badge: "Vocational Entrepreneur",
-    category: "Women Empowerment",
-    achievement: "Established Independent Beauty & Wellness Studio",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80",
-    quote: "The free Diploma in Cosmetology gave me both the hard skills and the business confidence to start my own salon and support my two daughters' schooling.",
-    story: "After completing the intensive six-month certification offered at the Sathyabama Anbu Center, Priya received toolkits and financial literacy training. Within a year, she established her micro-venture, employing two other women from her village.",
-    verifiedDate: "Certified 2023"
+    name: "Hemalatha P.",
+    badge: "Anbu & Maatram",
+    category: "Student Adoption",
+    achievement: "Providing High Quality Education and Care for Adopted Child",
+    image: "/images/image-8.jpg",
+    quote: "After she got the scholarship from this foundation, I was relieved and thanked GOD for showing me a path. I am very happy now and many thanks to ANBU and MAATRAM.",
+    story: "I have adopted Sabareeswari.K after her parents demise, with faith in god that I will be able to raise her well. Due to my financial instability, I had a tough time and was not in a position to give her good education. After she got the scholarship from this foundation, I was relieved and thanked GOD for showing me a path. I am very happy now and many thanks to ANBU and MAATRAM.",
+    verifiedDate: "Guardian"
   },
   {
     id: "story-4",
-    name: "Govt Hr. Sec. School, Semmancheri",
-    badge: "Institutional Transformation",
-    category: "School Adoption",
-    achievement: "100% Pass Percentage in Secondary Board Examinations",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
-    quote: "The interactive science lab and weekly university mentor visits sparked a brand-new curiosity for learning among our students.",
-    story: "Adopted under the Anbu Government School Support Program, the school received a complete library overhaul, new computer terminals, and clean sanitation infrastructure, resulting in marked improvements in attendance and exam outcomes.",
-    verifiedDate: "Partnership Ongoing"
+    name: "Mrs. Saly Sam",
+    badge: "Parent Assistance",
+    category: "Educational Aid",
+    achievement: "Smooth Educational Progress and Holistic Health Support for Daughter",
+    image: "/images/image-9.jpg",
+    quote: "We were tensed about her future. But god helped us through ANBU Foundation. Now her education is going very smoothly and health is good. We are happy that she is getting what she wanted.",
+    story: "I am very glad to get such assistance to my daughter. We were tensed about her future. But god helped us through ANBU Foundation. Now her education is going very smoothly and health is good. We are happy that she is getting what she wanted.",
+    verifiedDate: "Parent"
   }
 ];
 
@@ -206,7 +226,7 @@ export const announcementsData = [
     summary: "Deserving and economically underprivileged students pursuing higher education can now submit online application forms for full or partial tuition grants.",
     content: "Anbu Foundation invites applications from meritorious students who have passed their Higher Secondary (+2) examinations and wish to enroll in undergraduate degree programs. Applicants must provide relevant academic records and family income certificates. The selection committee conducts transparent review rounds ensuring genuine need-based distribution.",
     officialLink: "https://forms.gle/pYisUg7mBA4HHyAi9",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-10.jpg"
   },
   {
     id: "ann-2",
@@ -216,7 +236,7 @@ export const announcementsData = [
     summary: "Sathyabama university students are invited to register as academic mentors for primary and middle school students in adopted government schools.",
     content: "The Saturday University initiative connects enthusiastic collegiate tutors with young school children for interactive weekend lessons in Mathematics, Science, and English conversational skills. Volunteers receive official foundation service certificates and leadership recognition.",
     officialLink: "",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-11.jpeg"
   },
   {
     id: "ann-3",
@@ -226,7 +246,7 @@ export const announcementsData = [
     summary: "Registrations are now open for the six-month certified skill development program aimed at women seeking self-employment opportunities.",
     content: "Conducted at the dedicated training facility on Sathyabama campus, this practical training covers cosmetology fundamentals, client care, and small enterprise management. Course materials and toolkits are provided free of charge to selected candidates.",
     officialLink: "",
-    image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-12.jpg"
   },
   {
     id: "ann-4",
@@ -236,7 +256,7 @@ export const announcementsData = [
     summary: "Annual solidarity run organized with visually impaired students, student volunteers, and faculty to promote inclusive accessible education.",
     content: "Over 800 participants joined hands for the campus run supporting accessible infrastructure, assistive tech access, and dignity in higher education for students with disabilities.",
     officialLink: "",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80"
+    image: "/images/image-13.jpeg"
   }
 ];
 

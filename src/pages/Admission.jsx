@@ -135,7 +135,7 @@ export const Admission = () => {
               sx={{
                 backgroundColor: '#FFFFFF',
                 color: '#080131',
-                borderRadius: '16px',
+                borderRadius: 0,
                 p: { xs: 3.5, sm: 4.5 },
                 height: '100%',
                 border: '1.5px solid rgba(8, 1, 49, 0.08)',
@@ -166,7 +166,7 @@ export const Admission = () => {
               sx={{
                 backgroundColor: '#FFFFFF',
                 color: '#080131',
-                borderRadius: '16px',
+                borderRadius: 0,
                 p: { xs: 3.5, sm: 4.5 },
                 height: '100%',
                 border: '1.5px solid rgba(8, 1, 49, 0.08)',
@@ -231,39 +231,44 @@ export const Admission = () => {
               <Card
                 key={step.step}
                 sx={{
-                  backgroundColor: '#FFFFFF',
-                  color: '#080131',
-                  borderRadius: '16px',
+                  backgroundColor: '#002c62',
+                  color: '#FFFFFF',
+                  borderRadius: 0,
                   p: 3,
                   height: '100%',
-                  border: '1.5px solid rgba(8, 1, 49, 0.08)',
-                  boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 8px 30px rgba(0, 44, 98, 0.22)',
                   display: 'flex',
                   flexDirection: 'column',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 16px 40px rgba(0, 44, 98, 0.32)',
+                  },
                 }}
               >
                 <Box
                   sx={{
                     width: 48,
                     height: 48,
-                    borderRadius: '10px',
-                    backgroundColor: '#002c62',
+                    borderRadius: '50%',
+                    backgroundColor: '#faf6ef',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     mb: 2,
                     fontWeight: 800,
-                    fontSize: '1.2rem',
-                    color: '#FFFFFF',
-                    border: '1.5px solid rgba(8, 1, 49, 0.08)',
+                    fontSize: '1.15rem',
+                    color: '#002c62',
+                    border: '1px solid rgba(8, 1, 49, 0.1)',
                   }}
                 >
                   {step.step}
                 </Box>
-                <Typography variant="h6" sx={{ fontWeight: 600, color: '#080131', mb: 1, fontSize: '1.05rem' }}>
+                <Typography variant="h6" sx={{ fontWeight: 600, color: '#FFFFFF', mb: 1, fontSize: '1.05rem' }}>
                   {step.title}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#333333', lineHeight: 1.75 }}>
+                <Typography variant="body2" sx={{ color: '#FFFFFF', opacity: 0.9, lineHeight: 1.75 }}>
                   {step.desc}
                 </Typography>
               </Card>
@@ -295,25 +300,55 @@ export const Admission = () => {
             {admissionFaqs.map((faq, idx) => (
               <Accordion
                 key={idx}
+                defaultExpanded={idx === 0}
                 sx={{
                   backgroundColor: '#FFFFFF',
                   color: '#080131',
-                  borderRadius: '12px !important',
+                  borderRadius: '0 !important',
                   mb: 2,
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
-                  boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
+                  boxShadow: '0 4px 20px rgba(8, 1, 49, 0.06)',
+                  overflow: 'hidden',
+                  '&:before': { display: 'none' },
                 }}
               >
-                <AccordionSummary expandIcon={<ExpandMoreIcon sx={{ color: '#080131' }} />} sx={{ p: 2.5 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                    <LiveHelpIcon sx={{ color: '#002c62', fontSize: 22 }} />
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon sx={{ color: '#002c62', fontSize: 28 }} />}
+                  sx={{ p: 2.5 }}
+                >
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Box
+                      sx={{
+                        width: 36,
+                        height: 36,
+                        borderRadius: '50%',
+                        backgroundColor: '#002c62',
+                        color: '#FFFFFF',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontWeight: 700,
+                        fontSize: '0.88rem',
+                        flexShrink: 0,
+                      }}
+                    >
+                      {String(idx + 1).padStart(2, '0')}
+                    </Box>
                     <Typography variant="h6" sx={{ fontWeight: 600, color: '#080131', fontSize: { xs: '1rem', md: '1.15rem' } }}>
                       {faq.question}
                     </Typography>
                   </Box>
                 </AccordionSummary>
-                <AccordionDetails sx={{ px: 3, pb: 3, pt: 1, borderTop: '1px solid rgba(8, 1, 49, 0.08)' }}>
-                  <Typography variant="body1" sx={{ color: '#333333', lineHeight: 1.75 }}>
+                <AccordionDetails
+                  sx={{
+                    backgroundColor: '#002c62',
+                    color: '#FFFFFF',
+                    px: { xs: 2.5, md: 3.5 },
+                    py: 3,
+                    borderTop: '1px solid rgba(255, 255, 255, 0.15)',
+                  }}
+                >
+                  <Typography variant="body1" sx={{ color: '#FFFFFF', opacity: 0.95, lineHeight: 1.8, fontSize: '0.98rem' }}>
                     {faq.answer}
                   </Typography>
                 </AccordionDetails>
@@ -337,7 +372,7 @@ export const Admission = () => {
             sx={{
               backgroundColor: '#FFFFFF',
               color: '#080131',
-              borderRadius: '24px',
+              borderRadius: 0,
               p: { xs: 4, sm: 6 },
               border: '1.5px solid rgba(8, 1, 49, 0.08)',
               boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
@@ -360,7 +395,7 @@ export const Admission = () => {
                 px: 4,
                 py: 1.5,
                 fontWeight: 700,
-                borderRadius: '8px',
+                borderRadius: 0,
                 border: '1.5px solid rgba(8, 1, 49, 0.08)',
                 '&:hover': { backgroundColor: '#002c62', color: '#FFFFFF', boxShadow: 'none' },
               }}

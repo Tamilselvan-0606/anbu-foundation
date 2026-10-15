@@ -562,7 +562,7 @@ export const Home = () => {
                 sx={{
                   position: 'relative',
                   overflow: 'hidden',
-                  borderRadius: '16px',
+                  borderRadius: 0,
                   boxShadow: '0 20px 45px rgba(8, 1, 49, 0.16)',
                   border: '1.5px solid rgba(8, 1, 49, 0.08)',
                   width: '100%',
@@ -570,8 +570,8 @@ export const Home = () => {
               >
                 <Box
                   component="img"
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80"
-                  alt="Inclusive Education and Mentoring"
+                  src="/images/image-13.jpg"
+                  alt="A Foundation Built on Care, Opportunity, and Growth"
                   sx={{
                     width: '100%',
                     height: { xs: 320, sm: 380, md: 440 },
@@ -665,22 +665,22 @@ export const Home = () => {
           >
             {[
               {
-                icon: <SchoolIcon sx={{ fontSize: 32, color: '#002c62' }} />,
+                icon: <SchoolIcon sx={{ fontSize: 28, color: '#002c62' }} />,
                 title: 'Higher Education Access',
                 desc: 'Supporting deserving candidates with full or partial scholarships across arts, science, and technical streams.',
               },
               {
-                icon: <VolunteerActivismIcon sx={{ fontSize: 32, color: '#002c62' }} />,
+                icon: <VolunteerActivismIcon sx={{ fontSize: 28, color: '#002c62' }} />,
                 title: 'Inclusive Learning Tracks',
                 desc: 'Accessible computer terminals, Braille support, and scribe assistance for visually impaired students.',
               },
               {
-                icon: <AutoStoriesIcon sx={{ fontSize: 32, color: '#002c62' }} />,
+                icon: <AutoStoriesIcon sx={{ fontSize: 28, color: '#002c62' }} />,
                 title: 'Adopted Schools & Labs',
                 desc: 'Equipping nearby government schools with modern STEM laboratories, libraries, and clean water units.',
               },
               {
-                icon: <GroupsIcon sx={{ fontSize: 32, color: '#002c62' }} />,
+                icon: <GroupsIcon sx={{ fontSize: 28, color: '#002c62' }} />,
                 title: 'Women Skill Certification',
                 desc: 'Free accredited Diploma courses in Cosmetology and vocational trades equipping women for economic independence.',
               },
@@ -693,22 +693,23 @@ export const Home = () => {
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.25, 0.8, 0.25, 1] }}
                 sx={{
-                  backgroundColor: '#FFFFFF',
-                  color: '#000000',
-                  borderRadius: '16px',
+                  backgroundColor: '#002c62',
+                  color: '#FFFFFF',
+                  borderRadius: 0,
                   p: { xs: 3, md: 3.5 },
-                  border: '1px solid rgba(8, 1, 49, 0.08)',
-                  boxShadow: '0 8px 30px rgba(8, 1, 49, 0.07)',
+                  border: '1.5px solid rgba(255, 255, 255, 0.15)',
+                  boxShadow: '0 8px 30px rgba(0, 44, 98, 0.2)',
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
                   overflow: 'hidden',
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-6px)',
-                    boxShadow: '0 16px 40px rgba(8, 1, 49, 0.12)',
+                    boxShadow: '0 16px 45px rgba(0, 44, 98, 0.35)',
+                    borderColor: 'rgba(255, 255, 255, 0.35)',
                     '& .accent-bar': {
-                      backgroundColor: '#7974c4',
+                      backgroundColor: '#f4f4f2',
                     },
                   },
                 }}
@@ -722,22 +723,23 @@ export const Home = () => {
                     left: 0,
                     right: 0,
                     height: '3px',
-                    backgroundColor: '#002c62',
+                    backgroundColor: 'rgba(255, 255, 255, 0.35)',
                     transition: 'background-color 0.3s ease',
                   }}
                 />
 
+                {/* Round shape icon container with ivory background */}
                 <Box
                   sx={{
-                    width: 52,
-                    height: 52,
-                    borderRadius: '12px',
-                    backgroundColor: 'rgba(138, 133, 214, 0.15)',
+                    width: 56,
+                    height: 56,
+                    borderRadius: '50%',
+                    backgroundColor: '#f4f4f2',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     mb: 2.5,
-                    border: '1px solid rgba(138, 133, 214, 0.35)',
+                    boxShadow: '0 4px 14px rgba(0, 0, 0, 0.2)',
                   }}
                 >
                   {stat.icon}
@@ -746,8 +748,8 @@ export const Home = () => {
                 <Typography
                   variant="h6"
                   sx={{
-                    fontWeight: 600,
-                    color: '#000000',
+                    fontWeight: 700,
+                    color: '#FFFFF0',
                     mb: 1.5,
                     fontSize: { xs: '1.1rem', md: '1.15rem' },
                     lineHeight: 1.35,
@@ -759,7 +761,8 @@ export const Home = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: '#333333',
+                    color: '#f4f4f2',
+                    opacity: 0.9,
                     lineHeight: 1.75,
                     fontSize: '0.88rem',
                     flexGrow: 1,
@@ -806,56 +809,60 @@ export const Home = () => {
           >
             <Table sx={{ minWidth: 750 }}>
               <TableHead>
-                <TableRow sx={{ backgroundColor: 'rgba(138, 133, 214, 0.14)', borderBottom: '2px solid rgba(138, 133, 214, 0.4)' }}>
+                <TableRow sx={{ backgroundColor: '#002c62', borderBottom: '2px solid rgba(255, 255, 255, 0.2)' }}>
                   <TableCell
-                    align="center"
+                    align="left"
                     sx={{
-                      color: '#080131',
+                      color: '#FFFFFF',
                       fontWeight: 700,
                       fontSize: '0.9rem',
                       py: 2.2,
+                      px: 3,
                       textTransform: 'uppercase',
                       letterSpacing: '0.05em',
-                      borderRight: '1px solid rgba(8, 1, 49, 0.08)',
+                      borderRight: '1px solid rgba(255, 255, 255, 0.12)',
                     }}
                   >
                     Student / Scholar
                   </TableCell>
                   <TableCell
-                    align="center"
+                    align="left"
                     sx={{
-                      color: '#080131',
+                      color: '#FFFFFF',
                       fontWeight: 700,
                       fontSize: '0.9rem',
                       py: 2.2,
+                      px: 3,
                       textTransform: 'uppercase',
                       letterSpacing: '0.05em',
-                      borderRight: '1px solid rgba(8, 1, 49, 0.08)',
+                      borderRight: '1px solid rgba(255, 255, 255, 0.12)',
                     }}
                   >
                     Initiative
                   </TableCell>
                   <TableCell
-                    align="center"
+                    align="left"
                     sx={{
-                      color: '#080131',
+                      color: '#FFFFFF',
                       fontWeight: 700,
                       fontSize: '0.9rem',
                       py: 2.2,
+                      px: 3,
                       textTransform: 'uppercase',
                       letterSpacing: '0.05em',
-                      borderRight: '1px solid rgba(8, 1, 49, 0.08)',
+                      borderRight: '1px solid rgba(255, 255, 255, 0.12)',
                     }}
                   >
                     Achievement & Outcome
                   </TableCell>
                   <TableCell
-                    align="center"
+                    align="left"
                     sx={{
-                      color: '#080131',
+                      color: '#FFFFFF',
                       fontWeight: 700,
                       fontSize: '0.9rem',
                       py: 2.2,
+                      px: 3,
                       textTransform: 'uppercase',
                       letterSpacing: '0.05em',
                     }}
@@ -877,14 +884,15 @@ export const Home = () => {
                     }}
                   >
                     <TableCell
-                      align="center"
+                      align="left"
                       sx={{
                         py: 2.5,
+                        px: 3,
                         verticalAlign: 'middle',
                         borderRight: '1px solid rgba(8, 1, 49, 0.08)',
                       }}
                     >
-                      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
+                      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 2 }}>
                         <Avatar
                           src={story.image}
                           alt={story.name}
@@ -902,9 +910,10 @@ export const Home = () => {
                     </TableCell>
 
                     <TableCell
-                      align="center"
+                      align="left"
                       sx={{
                         py: 2.5,
+                        px: 3,
                         verticalAlign: 'middle',
                         borderRight: '1px solid rgba(8, 1, 49, 0.08)',
                       }}
@@ -918,9 +927,10 @@ export const Home = () => {
                     </TableCell>
 
                     <TableCell
-                      align="center"
+                      align="left"
                       sx={{
                         py: 2.5,
+                        px: 3,
                         verticalAlign: 'middle',
                         maxWidth: 300,
                         borderRight: '1px solid rgba(8, 1, 49, 0.08)',
@@ -932,9 +942,10 @@ export const Home = () => {
                     </TableCell>
 
                     <TableCell
-                      align="center"
+                      align="left"
                       sx={{
                         py: 2.5,
+                        px: 3,
                         verticalAlign: 'middle',
                       }}
                     >
@@ -999,21 +1010,106 @@ export const Home = () => {
             textColor="#080131"
           />
 
+          {/* Auto-scrolling Carousel Container */}
           <Box
             sx={{
-              display: 'grid',
-              gridTemplateColumns: {
-                xs: '1fr',
-                md: 'repeat(3, 1fr)',
+              position: 'relative',
+              width: '100%',
+              overflow: 'hidden',
+              py: 2,
+              '&:hover .carousel-track': {
+                animationPlayState: 'paused',
               },
-              gap: { xs: 3, md: 4 },
             }}
           >
-            {announcementsData.slice(0, 3).map((ann) => (
-              <Box key={ann.id} sx={{ height: '100%' }}>
-                <AnnouncementCard announcement={ann} />
-              </Box>
-            ))}
+            {/* Soft edge fade masks for high-end look */}
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                left: 0,
+                width: { xs: 40, md: 80 },
+                background: 'linear-gradient(to right, #f4f4f2 0%, rgba(244,244,242,0) 100%)',
+                zIndex: 2,
+                pointerEvents: 'none',
+              }}
+            />
+            <Box
+              sx={{
+                position: 'absolute',
+                top: 0,
+                bottom: 0,
+                right: 0,
+                width: { xs: 40, md: 80 },
+                background: 'linear-gradient(to left, #f4f4f2 0%, rgba(244,244,242,0) 100%)',
+                zIndex: 2,
+                pointerEvents: 'none',
+              }}
+            />
+
+            {/* Scrolling Track */}
+            <Box
+              className="carousel-track"
+              sx={{
+                display: 'flex',
+                gap: 3,
+                width: 'max-content',
+                animation: 'infiniteScroll 24s linear infinite',
+                '@keyframes infiniteScroll': {
+                  '0%': { transform: 'translateX(0)' },
+                  '100%': { transform: 'translateX(-50%)' },
+                },
+              }}
+            >
+              {[...announcementsData, ...announcementsData].map((ann, idx) => (
+                <Box
+                  key={`${ann.id}-${idx}`}
+                  onClick={() => navigate(`/announcements/${ann.id}`)}
+                  sx={{
+                    flexShrink: 0,
+                    width: { xs: 260, sm: 300, md: 340 },
+                    backgroundColor: '#FFFFFF',
+                    p: 1.5,
+                    border: '1.5px solid rgba(8, 1, 49, 0.08)',
+                    boxShadow: '0 4px 18px rgba(8, 1, 49, 0.05)',
+                    cursor: 'pointer',
+                    transition: 'transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease',
+                    '&:hover': {
+                      transform: 'translateY(-6px)',
+                      boxShadow: '0 14px 32px rgba(0, 44, 98, 0.15)',
+                      borderColor: 'rgba(0, 44, 98, 0.3)',
+                      '& img': {
+                        transform: 'scale(1.05)',
+                      },
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: '100%',
+                      height: { xs: 180, sm: 200, md: 220 },
+                      overflow: 'hidden',
+                      backgroundColor: '#faf6ef',
+                      border: '1px solid rgba(8, 1, 49, 0.08)',
+                    }}
+                  >
+                    <Box
+                      component="img"
+                      src={ann.image}
+                      alt={ann.title}
+                      sx={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.5s ease',
+                      }}
+                    />
+                  </Box>
+                </Box>
+              ))}
+            </Box>
           </Box>
 
           <Box sx={{ textAlign: 'center', mt: 6 }}>

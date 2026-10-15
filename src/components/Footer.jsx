@@ -35,8 +35,9 @@ export const Footer = () => {
                 src="/images/image.png"
                 alt="Anbu Foundation"
                 sx={{
-                  height: { xs: 52, md: 62 },
+                  height: { xs: 64, sm: 74, md: 84 },
                   width: 'auto',
+                  maxWidth: '100%',
                   objectFit: 'contain',
                   display: 'block',
                 }}

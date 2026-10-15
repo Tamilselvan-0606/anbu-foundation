@@ -63,7 +63,7 @@ export const InitiativeCard = ({ initiative }) => {
         onMouseLeave={handleMouseLeave}
         sx={{
           position: 'relative',
-          borderRadius: '16px',
+          borderRadius: 0,
           overflow: 'hidden',
           height: 380,
           boxShadow: isHovered ? '0 16px 45px rgba(8, 1, 49, 0.16)' : '0 8px 30px rgba(8, 1, 49, 0.08)',

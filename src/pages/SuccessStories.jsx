@@ -71,8 +71,13 @@ export const SuccessStories = () => {
           <Box
             sx={{
               display: 'grid',
-              gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-              gap: 4,
+              gridTemplateColumns: {
+                xs: '1fr',
+                sm: 'repeat(2, 1fr)',
+                md: 'repeat(4, 1fr)',
+              },
+              gap: 3.5,
+              width: '100%',
             }}
           >
             {successStoriesData.map((story) => (
@@ -130,7 +135,7 @@ export const SuccessStories = () => {
                 sx={{
                   backgroundColor: '#FFFFFF',
                   color: '#080131',
-                  borderRadius: '16px',
+                  borderRadius: 0,
                   p: { xs: 3, md: 4.5 },
                   height: '100%',
                   display: 'flex',
@@ -168,102 +173,257 @@ export const SuccessStories = () => {
         <Container maxWidth="xl">
           <Card
             sx={{
-              backgroundColor: '#FFFFFF',
-              color: '#080131',
-              borderRadius: '24px',
-              p: { xs: 4, sm: 6 },
-              border: '1.5px solid rgba(8, 1, 49, 0.08)',
-              boxShadow: '0 8px 30px rgba(8, 1, 49, 0.08)',
+              backgroundColor: '#002c62',
+              color: '#FFFFFF',
+              borderRadius: 0,
+              p: { xs: 3.5, sm: 5, md: 6 },
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              boxShadow: '0 12px 36px rgba(0, 44, 98, 0.25)',
             }}
           >
             <Box sx={{ textAlign: 'center', mb: 4 }}>
-              <Typography variant="h3" sx={{ fontWeight: 600, color: '#080131', mb: 1.5, fontSize: { xs: '1.8rem', md: '2.3rem' } }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 700,
+                  color: '#FFFFFF',
+                  mb: 1.5,
+                  fontSize: { xs: '1.8rem', md: '2.3rem' },
+                  letterSpacing: '-0.02em',
+                }}
+              >
                 Share Your Anbu Journey
               </Typography>
-              <Typography variant="body1" sx={{ color: '#333333', lineHeight: 1.75 }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: 'rgba(255, 255, 255, 0.9)',
+                  lineHeight: 1.75,
+                  maxWidth: 780,
+                  mx: 'auto',
+                  fontSize: { xs: '0.95rem', md: '1.02rem' },
+                }}
+              >
                 Are you an Anbu Foundation scholarship recipient or volunteer? Submit your journey to inspire the next generation of students.
               </Typography>
             </Box>
 
             {formSubmitted ? (
-              <Box sx={{ p: 4, backgroundColor: '#002c62', borderRadius: '12px', textAlign: 'center', border: '1.5px solid rgba(8, 1, 49, 0.08)' }}>
-                <CheckCircleIcon sx={{ fontSize: 50, color: '#FFFFFF', mb: 2 }} />
-                <Typography variant="h5" sx={{ fontWeight: 600, color: '#FFFFFF', mb: 1 }}>
+              <Box
+                sx={{
+                  p: 4,
+                  backgroundColor: '#faf6ef',
+                  color: '#002c62',
+                  borderRadius: 0,
+                  textAlign: 'center',
+                  border: '1.5px solid rgba(8, 1, 49, 0.1)',
+                }}
+              >
+                <CheckCircleIcon sx={{ fontSize: 50, color: '#002c62', mb: 2 }} />
+                <Typography variant="h5" sx={{ fontWeight: 700, color: '#002c62', mb: 1 }}>
                   Thank You for Sharing!
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#FFFFFF', opacity: 0.9 }}>
+                <Typography variant="body2" sx={{ color: '#333333' }}>
                   Your submission has been received by our editorial team. It will be verified and published following review.
                 </Typography>
               </Box>
             ) : (
-              <Box component="form" onSubmit={handleSubmit}>
-                <Grid container spacing={2.5}>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Full Name"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. S. Ramanathan"
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Email Address"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="email@domain.com"
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Program / Cohort / Initiative"
-                      value={formData.program}
-                      onChange={(e) => setFormData({ ...formData, program: e.target.value })}
-                      placeholder="e.g. Anbu Scholarship 2024"
-                    />
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <TextField
-                      fullWidth
-                      label="Your Journey & Experience"
-                      required
-                      value={formData.story}
-                      onChange={(e) => setFormData({ ...formData, story: e.target.value })}
-                      placeholder="Describe your journey..."
-                    />
-                  </Grid>
+              <Box
+                component="form"
+                onSubmit={handleSubmit}
+                sx={{
+                  display: 'flex',
+                  flexDirection: { xs: 'column', md: 'row' },
+                  flexWrap: { xs: 'nowrap', md: 'wrap', lg: 'nowrap' },
+                  gap: 2,
+                  alignItems: 'center',
+                  width: '100%',
+                }}
+              >
+                <TextField
+                  fullWidth
+                  placeholder="Full Name *"
+                  required
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  inputProps={{ 'aria-label': 'Full Name' }}
+                  sx={{
+                    flex: { lg: 1, md: '1 1 45%' },
+                    backgroundColor: '#faf6ef',
+                    borderRadius: 0,
+                    '& .MuiOutlinedInput-root': {
+                      height: 52,
+                      borderRadius: 0,
+                      backgroundColor: '#faf6ef',
+                      '& fieldset': {
+                        borderColor: 'rgba(8, 1, 49, 0.15)',
+                        borderRadius: 0,
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#002c62',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#002c62',
+                        borderWidth: '1.5px',
+                      },
+                    },
+                    '& .MuiOutlinedInput-input': {
+                      color: '#080131',
+                      fontWeight: 500,
+                      fontSize: '0.92rem',
+                      '&::placeholder': {
+                        color: '#555555',
+                        opacity: 0.9,
+                      },
+                    },
+                  }}
+                />
 
-                  <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                    <Button
-                      type="submit"
-                      size="large"
-                      endIcon={<SendIcon sx={{ color: '#FFFFFF' }} />}
-                      sx={{
-                        backgroundColor: '#002c62',
-                        color: '#FFFFFF',
-                        px: 5,
-                        py: 1.4,
-                        fontWeight: 700,
-                        fontSize: '1rem',
-                        borderRadius: '8px',
-                        border: '1.5px solid rgba(8, 1, 49, 0.08)',
-                        '&:hover': {
-                          backgroundColor: '#002c62',
-                          color: '#FFFFFF',
-                          boxShadow: 'none',
-                        },
-                      }}
-                    >
-                      Submit Story for Review
-                    </Button>
-                  </Grid>
-                </Grid>
+                <TextField
+                  fullWidth
+                  placeholder="Email Address *"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  inputProps={{ 'aria-label': 'Email Address' }}
+                  sx={{
+                    flex: { lg: 1, md: '1 1 45%' },
+                    backgroundColor: '#faf6ef',
+                    borderRadius: 0,
+                    '& .MuiOutlinedInput-root': {
+                      height: 52,
+                      borderRadius: 0,
+                      backgroundColor: '#faf6ef',
+                      '& fieldset': {
+                        borderColor: 'rgba(8, 1, 49, 0.15)',
+                        borderRadius: 0,
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#002c62',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#002c62',
+                        borderWidth: '1.5px',
+                      },
+                    },
+                    '& .MuiOutlinedInput-input': {
+                      color: '#080131',
+                      fontWeight: 500,
+                      fontSize: '0.92rem',
+                      '&::placeholder': {
+                        color: '#555555',
+                        opacity: 0.9,
+                      },
+                    },
+                  }}
+                />
+
+                <TextField
+                  fullWidth
+                  placeholder="Program / Cohort / Initiative"
+                  value={formData.program}
+                  onChange={(e) => setFormData({ ...formData, program: e.target.value })}
+                  inputProps={{ 'aria-label': 'Program or Initiative' }}
+                  sx={{
+                    flex: { lg: 1, md: '1 1 45%' },
+                    backgroundColor: '#faf6ef',
+                    borderRadius: 0,
+                    '& .MuiOutlinedInput-root': {
+                      height: 52,
+                      borderRadius: 0,
+                      backgroundColor: '#faf6ef',
+                      '& fieldset': {
+                        borderColor: 'rgba(8, 1, 49, 0.15)',
+                        borderRadius: 0,
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#002c62',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#002c62',
+                        borderWidth: '1.5px',
+                      },
+                    },
+                    '& .MuiOutlinedInput-input': {
+                      color: '#080131',
+                      fontWeight: 500,
+                      fontSize: '0.92rem',
+                      '&::placeholder': {
+                        color: '#555555',
+                        opacity: 0.9,
+                      },
+                    },
+                  }}
+                />
+
+                <TextField
+                  fullWidth
+                  placeholder="Your Journey & Experience..."
+                  required
+                  value={formData.story}
+                  onChange={(e) => setFormData({ ...formData, story: e.target.value })}
+                  inputProps={{ 'aria-label': 'Your Journey & Experience' }}
+                  sx={{
+                    flex: { lg: 1, md: '1 1 45%' },
+                    backgroundColor: '#faf6ef',
+                    borderRadius: 0,
+                    '& .MuiOutlinedInput-root': {
+                      height: 52,
+                      borderRadius: 0,
+                      backgroundColor: '#faf6ef',
+                      '& fieldset': {
+                        borderColor: 'rgba(8, 1, 49, 0.15)',
+                        borderRadius: 0,
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#002c62',
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#002c62',
+                        borderWidth: '1.5px',
+                      },
+                    },
+                    '& .MuiOutlinedInput-input': {
+                      color: '#080131',
+                      fontWeight: 500,
+                      fontSize: '0.92rem',
+                      '&::placeholder': {
+                        color: '#555555',
+                        opacity: 0.9,
+                      },
+                    },
+                  }}
+                />
+
+                <Button
+                  type="submit"
+                  endIcon={<SendIcon sx={{ color: '#002c62', fontSize: '1.15rem' }} />}
+                  sx={{
+                    flex: { lg: '0 0 auto', md: '1 1 100%' },
+                    height: 52,
+                    backgroundColor: '#faf6ef',
+                    color: '#002c62',
+                    px: 3.5,
+                    fontWeight: 700,
+                    fontSize: '0.95rem',
+                    borderRadius: 0,
+                    border: '1.5px solid #faf6ef',
+                    whiteSpace: 'nowrap',
+                    textTransform: 'none',
+                    boxShadow: '0 4px 14px rgba(0, 0, 0, 0.18)',
+                    transition: 'all 0.25s ease',
+                    '&:hover': {
+                      backgroundColor: '#ede5d4',
+                      borderColor: '#ede5d4',
+                      color: '#002c62',
+                      boxShadow: '0 6px 18px rgba(0, 0, 0, 0.25)',
+                      transform: 'translateY(-1px)',
+                    },
+                  }}
+                >
+                  Submit Story for Review
+                </Button>
               </Box>
             )}
           </Card>
